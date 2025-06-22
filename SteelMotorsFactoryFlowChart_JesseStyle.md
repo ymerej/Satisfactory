@@ -5,11 +5,11 @@
 ```mermaid
 flowchart TD
     %% Raw Inputs
-    A[Iron Ore] -->|180/min| B[Foundry<br/>4x]
-    C[Coal] -->|180/min| B
+    A[Iron Ore] -->|360/min| B[Foundry<br/>8x]
+    C[Coal] -->|360/min| B
     
     %% Floor 1 - Steel Ingots
-    B -->|180/min| D[Steel Ingots]
+    B -->|360/min| D[Steel Ingots]
     
     %% Floor 2 - Basic Steel Component Split
     D -->|180/min| E[Constructor<br/>3x<br/>Steel Beams]
@@ -59,9 +59,9 @@ flowchart TD
 
 ### Material Flow Summary
 ```
-Iron Ore (180/min) + Coal (180/min)
+Iron Ore (360/min) + Coal (360/min)
     ↓ 
-Steel Ingots (180/min)
+Steel Ingots (360/min)
     ├── Steel Beams (45/min) → Encased Industrial Beams (11.25/min)
     └── Steel Pipes (120/min) → Stators (25/min) + Heavy Modular Frames (6/min)
                                     ↓
@@ -82,7 +82,7 @@ External Dependencies:
 #### Floor 1: Primary Processing
 | Machine | Count | Input | Output |
 |---------|-------|-------|--------|
-| Foundry | 4x | 180 Iron Ore + 180 Coal/min | 180 Steel Ingots/min |
+| Foundry | 8x | 360 Iron Ore + 360 Coal/min | 360 Steel Ingots/min |
 
 #### Floor 2: Component Manufacturing  
 | Machine | Count | Input | Output |
@@ -122,7 +122,7 @@ External Dependencies:
 - **Coal Mining:** Direct coal requirement for steel production
 
 **Power Requirements:**
-- **Total Consumption:** ~3,625 MW
+- **Total Consumption:** ~4,465 MW
 - **Critical Machines:** Manufacturers consume most power (275 MW each)
 - **Scaling Factor:** Linear scaling based on foundry count
 
@@ -130,11 +130,11 @@ External Dependencies:
 - **From Iron Section:** Rotors (50/min), Modular Frames (15/min), Screws (300/min)
 - **From Copper Section:** Wire (200/min)
 - **From Limestone Processing:** Concrete (56.25/min)
-- **Direct Mining:** Iron Ore (180/min), Coal (180/min)
+- **Direct Mining:** Iron Ore (360/min), Coal (360/min)
 
 ### Key Ratios
-- **4 Foundries** support this entire production chain
-- **Steel Consumption Efficiency:** 30 Steel Ingots per Motor produced
+- **8 Foundries** support this entire production chain
+- **Steel Consumption Efficiency:** 72 Steel Ingots per Motor produced
 - **Primary Outputs:** 25 Motors/min + 6 Heavy Modular Frames/min
 - **Integration Complexity:** Requires inputs from 4+ different production areas
 

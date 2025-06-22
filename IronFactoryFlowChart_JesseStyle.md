@@ -68,12 +68,12 @@ Iron Ore (120/min)
 Iron Ingots (120/min)
     ├── Iron Plates (80/min) ──┐
     └── Iron Rods (120/min) ───┼── Screws (480/min)
-                              │       ├── → Reinforced Iron Plates (20/min)
-                              │       └── → Rotors (16/min)
-                              ├── → Rotors (20/min direct)
-                              ├── → Modular Frames (48/min direct)
-                              ├── → Iron Rebar (15/min)
-                              └── → Portable Miners (24/min)
+                               │       ├── → Reinforced Iron Plates (20/min)
+                               │       └── → Rotors (16/min)
+                               ├── → Rotors (20/min direct)
+                               ├── → Modular Frames (48/min direct)
+                               ├── → Iron Rebar (15/min)
+                               └── → Portable Miners (24/min)
 
 Final Outputs:
 ├── Modular Frames (8/min) ◄── Primary Product
